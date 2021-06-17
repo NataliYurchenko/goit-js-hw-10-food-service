@@ -23,7 +23,6 @@ LoadInit();
 
 refs.themeSwitcher.addEventListener("change", onThemeSwitcherClick);
 
-
 function onThemeSwitcherClick(event) {
     if (event.target.checked) {
         document.body.classList.add(Theme.DARK);
@@ -50,6 +49,9 @@ function LoadInit() {
         document.body.classList.remove(Theme.LIGHT);
         refs.themeSwitcher.checked = true;
         return;
-    };
+    }
+    else {
+        document.body.classList.add(Theme.LIGHT);
+    }
 
 };
